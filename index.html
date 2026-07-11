@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Moment in Time Bridal | Luxury Digital Boutique Concept</title>
+    
+    <!-- Load Premium Google Fonts for the Editorial Look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
     <style>
-        /* Modern Reset & Variable Setup */
+        /* Premium Editorial Reset & Variable Setup */
         * {
             margin: 0;
             padding: 0;
@@ -13,11 +19,17 @@
         }
 
         :root {
-            --bg-color: #0d0d0d;
-            --surface-color: #1a1a1a;
-            --accent-gold: #d4af37;
-            --text-main: #f5f5f7;
-            --text-muted: #a1a1a6;
+            /* The Clean, Bright Editorial Canvas */
+            --bg-color: #fbfbfa;          /* Crisp, warm alabaster/ivory background */
+            --surface-color: #ffffff;     /* Pure white for structured cards/sections */
+            --alternative-bg: #f4f3f0;    /* Soft, muted linen tint for distinct rows */
+            
+            /* Elegant High-Fashion Typography & Details */
+            --text-main: #1c1b1a;         /* Deep charcoal-espresso (much softer than pure black) */
+            --text-muted: #6e6d6a;        /* Elegant slate grey for descriptions */
+            --accent-gold: #c5a880;       /* Muted, delicate champagne-gold (not yellow) */
+            
+            /* Core Font Stacks */
             --font-serif: 'Playfair Display', Georgia, serif;
             --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
@@ -30,39 +42,40 @@
             overflow-x: hidden;
         }
 
-        /* Top Notification Bar */
+        /* Top System / Promotion Banner */
         .promo-banner {
             background-color: var(--surface-color);
-            color: var(--accent-gold);
+            color: var(--text-main);
             text-align: center;
-            padding: 8px 16px;
-            font-size: 0.85rem;
+            padding: 12px 16px;
+            font-size: 0.75rem;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            font-weight: 500;
+            border-bottom: 1px solid #e8e7e3;
         }
 
-        /* Premium Navigation Header */
+        /* High-End Sticky Header */
         .main-header {
             width: 100%;
-            background-color: rgba(13, 13, 13, 0.95);
-            backdrop-filter: blur(10px);
+            background-color: rgba(251, 251, 250, 0.96);
+            backdrop-filter: blur(15px);
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(28, 27, 26, 0.05);
         }
 
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 20px 40px;
+            padding: 24px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        /* Luxury Logo Layout */
+        /* Brand Typography */
         .brand-logo {
             display: flex;
             flex-direction: column;
@@ -73,131 +86,433 @@
 
         .brand-logo .main-title {
             font-family: var(--font-serif);
-            font-size: 1.4rem;
-            letter-spacing: 0.05em;
-            font-style: italic;
+            font-size: 1.5rem;
+            letter-spacing: 0.02em;
+            font-weight: 400;
         }
 
         .brand-logo .sub-title {
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             text-transform: uppercase;
-            letter-spacing: 0.3em;
-            color: var(--accent-gold);
-            margin-top: 2px;
+            letter-spacing: 0.25em;
+            color: var(--text-muted);
+            margin-top: 3px;
         }
 
-        /* Sophisticated Multi-Page Navigation Menu */
+        /* Crisp Navigation Tabs */
         .nav-menu {
             display: flex;
             align-items: center;
             list-style: none;
-            gap: 24px;
-        }
-
-        .nav-item {
-            position: relative;
+            gap: 28px;
         }
 
         .nav-link {
             text-decoration: none;
             color: var(--text-muted);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.12em;
             font-weight: 500;
-            transition: color 0.3s ease;
-            padding: 8px 0;
+            transition: color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            padding: 6px 0;
         }
 
         .nav-link:hover, .nav-link.active {
             color: var(--text-main);
         }
 
-        /* Accent indicator line on hover */
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background-color: var(--accent-gold);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after, .nav-link.active::after {
-            width: 100%;
-        }
-
-        /* Highlighted CTA Button for Appointments */
+        /* Apple-style Conversion CTA Button */
         .nav-cta {
-            background-color: transparent;
-            border: 1px solid var(--accent-gold);
-            padding: 10px 20px;
-            border-radius: 0;
-            color: var(--accent-gold);
-            font-size: 0.8rem;
+            background-color: var(--text-main);
+            border: 1px solid var(--text-main);
+            padding: 12px 24px;
+            border-radius: 2px;
+            color: #ffffff;
+            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.12em;
+            font-weight: 600;
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .nav-cta:hover {
-            background-color: var(--accent-gold);
-            color: var(--bg-color);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+            background-color: transparent;
+            color: var(--text-main);
         }
 
-        /* Hero / First Section Layout */
-        .hero-section {
-            min-height: 75vh;
+        /* Cinematic Video Banner Architecture */
+        .hero-container {
+            position: relative;
+            height: 75vh;
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            object-fit: cover;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Soft gradient to make white text completely legible */
+            background: linear-gradient(rgba(28, 27, 26, 0.2), rgba(28, 27, 26, 0.45));
+            z-index: 2;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 3;
             text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(rgba(13, 13, 13, 0.8), rgba(13, 13, 13, 0.9)), url('https://images.unsplash.com/photo-1549417229-aa67d3263c09?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            max-width: 900px;
+            padding: 0 20px;
         }
 
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .hero-tagline {
-            font-size: 0.9rem;
+        .hero-subheading {
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 0.4em;
-            color: var(--accent-gold);
-            margin-bottom: 20px;
+            letter-spacing: 0.3em;
+            color: #ffffff;
+            margin-bottom: 24px;
+            font-weight: 500;
         }
 
-        .hero-title {
+        .hero-headline {
             font-family: var(--font-serif);
-            font-size: 3.5rem;
+            font-size: 3.8rem;
+            color: #ffffff;
             font-weight: 400;
             line-height: 1.2;
-            margin-bottom: 30px;
-            letter-spacing: 0.02em;
+            letter-spacing: 0.01em;
+            margin-bottom: 40px;
         }
 
-        /* Responsive Breakpoints */
-        @media (max-width: 1100px) {
-            .nav-menu {
-                display: none; /* Hide standard navigation on mobile for clean drawer logic */
+        /* Primary/Secondary Buttons */
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 2px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-primary {
+            background-color: #ffffff;
+            color: var(--text-main);
+            border: 1px solid #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .btn-secondary:hover {
+            border-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* High-Conversion Live Availability Banner */
+        .availability-bar {
+            background-color: var(--alternative-bg);
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            border-bottom: 1px solid #e8e7e3;
+        }
+
+        .indicator-pulse {
+            width: 8px;
+            height: 8px;
+            background-color: #a3b899; /* Soft luxury sage green */
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(163, 184, 153, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(163, 184, 153, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(163, 184, 153, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(163, 184, 153, 0); }
+        }
+
+        .availability-text {
+            font-size: 0.85rem;
+            color: var(--text-main);
+            letter-spacing: 0.05em;
+        }
+
+        .availability-text a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 6px;
+        }
+
+        /* Section Layout Scaffolding */
+        .editorial-layout {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .section-container {
+            padding: 120px 0;
+        }
+
+        .alternative-row {
+            background-color: var(--alternative-bg);
+            margin: 0 -40px;
+            padding: 120px 40px;
+        }
+
+        .section-header {
+            max-width: 700px;
+            margin-bottom: 60px;
+        }
+
+        .section-tag {
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2.6rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: 0.01em;
+        }
+
+        .section-desc {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Designer Grid & Card System */
+        .designer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+
+        .designer-card {
+            background-color: var(--surface-color);
+            border: 1px solid #e8e7e3;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.01);
+            transition: transform 0.4s ease;
+        }
+
+        .designer-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 3 / 4;
+        }
+
+        .designer-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 35px;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
+        }
+
+        .designer-name {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+
+        .designer-price {
+            color: var(--accent-gold);
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .designer-story {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+
+        .card-link {
+            color: var(--text-main);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            text-decoration: none;
+            border-bottom: 1px solid var(--text-main);
+            padding-bottom: 4px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .card-link:hover {
+            color: var(--accent-gold);
+            border-color: var(--accent-gold);
+        }
+
+        /* Timeline / Bridal Experience Layout */
+        .timeline-container {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 25px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #e8e7e3;
+            z-index: 1;
+        }
+
+        .timeline-step {
+            position: relative;
+            z-index: 2;
+            flex: 1;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--surface-color);
+            border: 1px solid #e8e7e3;
+            color: var(--text-main);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .step-title {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+
+        .step-text {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Mobile Responsive Styling */
+        @media (max-width: 900px) {
+            .nav-menu { display: none; }
+            .designer-grid, .timeline-container {
+                grid-template-columns: 1fr;
+                flex-direction: column;
+                gap: 50px;
             }
+            .timeline-line { display: none; }
+            .hero-headline { font-size: 2.4rem; }
+            .hero-actions { flex-direction: column; gap: 15px; }
+            .editorial-layout { padding: 0 20px; }
+            .alternative-row { padding: 100px 20px; margin: 0 -20px; }
         }
     </style>
 </head>
 <body>
-<!-- 1. CINEMATIC HERO SECTION -->
+
+    <!-- 1. DYNAMIC SYSTEM BANNER -->
+    <div class="promo-banner">
+        Now Booking Luxury Fall & Winter Consultations
+    </div>
+
+    <!-- 2. GLOBAL HEADER NAVIGATION -->
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="#home" class="brand-logo">
+                <span class="main-title">A Moment in Time</span>
+                <span class="sub-title">Bridal Boutique</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#lookbook" class="nav-link">Lookbook</a></li>
+                <li><a href="#designers" class="nav-link">The Designers</a></li>
+                <li><a href="#real-weddings" class="nav-link">Real Weddings</a></li>
+                <li><a href="#stylists" class="nav-link">Meet Our Stylists</a></li>
+                <li><a href="#tour" class="nav-link">Virtual Tour</a></li>
+                <li><a href="#hub" class="nav-link">Planning Hub</a></li>
+                <li><a href="#portal" class="nav-link">VIP Portal</a></li>
+            </ul>
+            <a href="#book-appointment" class="nav-cta">Reserve a Suite</a>
+        </nav>
+    </header>
+
+    <!-- 3. CINEMATIC VIDEO HERO SECTION -->
     <section class="hero-container" id="home">
-        <!-- Background Asset Container -->
         <div class="video-overlay"></div>
-        <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1549417229-aa67d3263c09?auto=format&fit=crop&w=1920&q=80">
+        <!-- High-fashion placeholder bridal video asset -->
+        <video class="hero-video" autoplay muted loop playsinline poster="christinawubridal1.png">
             <source src="https://assets.mixkit.co/videos/preview/mixkit-bride-walking-in-a-beautiful-palace-42289-large.mp4" type="video/mp4">
         </video>
-        
         <div class="hero-inner">
             <p class="hero-subheading">Luxury Bridal Boutique in Niagara Region</p>
             <h1 class="hero-headline">Find the Dress You'll Remember Forever.</h1>
@@ -208,16 +523,16 @@
         </div>
     </section>
 
-    <!-- 2. HIGH-CONVERSION LIVE AVAILABILITY BANNER -->
+    <!-- 4. LIVE CONVERSION HOOK BANNER -->
     <div class="availability-bar">
         <div class="indicator-pulse"></div>
         <p class="availability-text">We have appointments available this week. <a href="#book-appointment">Secure your luxury suite &rarr;</a></p>
     </div>
 
-    <!-- MAIN CONTENT CONTAINERS -->
+    <!-- MAIN CORE CONTAINER -->
     <main class="editorial-layout">
 
-     <!-- 3. EDITORIAL DESIGNER SHOWCASE -->
+        <!-- 5. EDITORIAL DESIGNER SHOWCASE -->
         <section class="section-container" id="designers">
             <div class="section-header">
                 <span class="section-tag">Curated Collections</span>
@@ -258,8 +573,8 @@
             </div>
         </section>
 
-        <!-- 4. THE BRIDAL EXPERIENCE JOURNEY -->
-        <section class="section-container alternative-bg" id="experience">
+        <!-- 6. THE BRIDAL EXPERIENCE JOURNEY -->
+        <section class="section-container alternative-row" id="experience">
             <div class="section-header">
                 <span class="section-tag">The Customer Journey</span>
                 <h2 class="section-title">From Inspiration to "I Do."</h2>
@@ -290,7 +605,7 @@
                 <div class="timeline-step">
                     <div class="step-number">04</div>
                     <h3 class="step-title">Custom Alterations</h3>
-                    <p class="step-text">Our master paramedical fitting structure ensures your gown is tailored meticulously to your exact proportions.</p>
+                    <p class="step-text">Our master fitting team ensures your dream dress is tailored meticulously to your exact proportions.</p>
                 </div>
 
                 <div class="timeline-step">
@@ -302,7 +617,6 @@
         </section>
 
     </main>
-
 
 </body>
 </html>
