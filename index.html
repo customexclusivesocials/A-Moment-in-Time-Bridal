@@ -995,6 +995,184 @@
         }
     </style>
     </main>
+<!-- 8. EDITORIAL TESTIMONIALS & SOCIAL PROOF ENGINE -->
+        <section class="section-container alternative-row" id="real-weddings">
+            <div class="section-header">
+                <span class="section-tag">Love Stories</span>
+                <h2 class="section-title">The Real Brides</h2>
+                <p class="section-desc">Read true experiences from our real brides who found their dream dress and celebrated their moment in time.</p>
+            </div>
 
+            <!-- Curated Luxury Review Layout -->
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <blockquote class="testimonial-card">
+                    <span class="quote-mark">&#8220;</span>
+                    <p class="testimonial-quote">I cannot say enough amazing things about my experience here! The private suite felt so intimate and relaxed, and my stylist knew exactly what silhouette would make me feel beautiful before I even knew myself.</p>
+                    <cite class="testimonial-author">
+                        <strong>Sarah M.</strong>
+                        <span class="wedding-date">Married October 2025</span>
+                    </cite>
+                </blockquote>
+
+                <!-- Testimonial 2 -->
+                <blockquote class="testimonial-card">
+                    <span class="quote-mark">&#8220;</span>
+                    <p class="testimonial-quote">From the moment we walked in to the champagne celebration when I finally found the one, it was perfect. They made dress hunting completely stress-free and handled my alterations flawlessly.</p>
+                    <cite class="testimonial-author">
+                        <strong>Jessica T.</strong>
+                        <span class="wedding-date">Married June 2026</span>
+                    </cite>
+                </blockquote>
+
+                <!-- Testimonial 3 -->
+                <blockquote class="testimonial-card">
+                    <span class="quote-mark">&#8220;</span>
+                    <p class="testimonial-quote">They helped me customize my Christina Wu gown with the most breathtaking delicate veil. The level of care and personalized customer service here is something you just don't find anywhere else.</p>
+                    <cite class="testimonial-author">
+                        <strong>Amanda K.</strong>
+                        <span class="wedding-date">Married May 2026</span>
+                    </cite>
+                </blockquote>
+            </div>
+
+            <!-- Post-Purchase Review Hook Block -->
+            <div class="review-automation-cta">
+                <div class="review-cta-content">
+                    <h3 class="review-cta-title">Did you find your dream dress with us?</h3>
+                    <p class="review-cta-text">Share your unique experience to help future brides start their journey with absolute confidence.</p>
+                </div>
+                <a href="https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID" target="_blank" rel="noopener" class="review-submit-btn">Leave A Google Review</a>
+            </div>
+        </section>
+
+    <!-- TESTIMONIAL SUITE STYLING (Append to your master style block) -->
+    <style>
+        /* Testimonials Grid Architecture */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .testimonial-card {
+            background-color: var(--surface-color);
+            border: 1px solid #e8e7e3;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.01);
+            border-radius: 2px;
+        }
+
+        .quote-mark {
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            color: var(--accent-gold);
+            line-height: 1;
+            position: absolute;
+            top: 15px;
+            left: 30px;
+            opacity: 0.25;
+            user-select: none;
+        }
+
+        .testimonial-quote {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-main);
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            font-style: normal;
+            border-top: 1px solid rgba(232, 231, 227, 0.6);
+            padding-top: 15px;
+        }
+
+        .testimonial-author strong {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .wedding-date {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Review Hook Row Layout */
+        .review-automation-cta {
+            background-color: var(--surface-color);
+            border: 1px solid #e8e7e3;
+            padding: 40px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+            border-radius: 2px;
+        }
+
+        .review-cta-title {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 8px;
+            letter-spacing: 0.01em;
+        }
+
+        .review-cta-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .review-submit-btn {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--text-main);
+            padding: 14px 28px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            border-radius: 2px;
+        }
+
+        .review-submit-btn:hover {
+            background-color: var(--text-main);
+            color: #ffffff;
+        }
+
+        /* Responsive Flow Adjustments */
+        @media (max-width: 1100px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .review-automation-cta {
+                flex-direction: column;
+                text-align: center;
+                padding: 35px 24px;
+            }
+            .review-submit-btn {
+                width: 100%;
+            }
+        }
+    </style>
 </body>
 </html>
