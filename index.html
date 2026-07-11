@@ -872,6 +872,263 @@
             }
         }
     </style>
+        <!-- 7. LUXURY CONTACT & APPOINTMENT SUITE -->
+        <section class="section-container" id="book-appointment">
+            <div class="section-header">
+                <span class="section-tag">Visit the Boutique</span>
+                <h2 class="section-title">Connect With Us</h2>
+                <p class="section-desc">Drop us a line to ask a question, or reserve your private suite experience below.</p>
+            </div>
+
+            <div class="contact-split-grid">
+                <!-- Left Column: Luxury Lead Capture Form -->
+                <div class="contact-form-container">
+                    <form action="#" method="POST" class="luxury-form">
+                        <div class="form-group">
+                            <label for="client-name" class="form-label">Full Name</label>
+                            <input type="text" id="client-name" name="name" class="form-input" placeholder="Your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="client-email" class="form-label">Email Address *</label>
+                            <input type="email" id="client-email" name="email" class="form-input" placeholder="hello@yourdomain.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="client-message" class="form-label">How can we help you celebrate?</label>
+                            <textarea id="client-message" name="message" class="form-input form-textarea" placeholder="Tell us your wedding date, preferred designers, or questions..."></textarea>
+                        </div>
+
+                        <button type="submit" class="form-submit-btn">Send Message</button>
+                        
+                        <p class="form-captcha-notice">
+                            This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Right Column: Boutique Details & Hours Card -->
+                <div class="boutique-details-card">
+                    <div class="details-block">
+                        <h3 class="details-heading">Better yet, see us in person!</h3>
+                        <p class="details-text">We love our customers, so feel free to visit during normal business hours to explore our curated accessories or speak with a stylist.</p>
+                    </div>
+
+                    <div class="details-block">
+                        <h4 class="info-title">The Boutique</h4>
+                        <address class="boutique-address">
+                            <strong>A Moment In Time Bridal</strong><br>
+                            1322 Broad Street<br>
+                            New Castle, Indiana 47362<br>
+                            United States
+                        </address>
+                        <a href="tel:7655933666" class="boutique-phone">(765) 593-3666</a>
+                    </div>
+
+                    <div class="details-block">
+                        <h4 class="info-title">Hours</h4>
+                        <table class="hours-table">
+                            <tr><td>Monday</td><td class="status-closed">Closed</td></tr>
+                            <tr><td>Tuesday</td><td class="status-closed">Closed</td></tr>
+                            <tr><td>Wednesday</td><td>11:00 am – 07:00 pm</td></tr>
+                            <tr><td>Thursday</td><td>11:00 am – 07:00 pm</td></tr>
+                            <tr><td>Friday</td><td>11:00 am – 05:00 pm</td></tr>
+                            <tr><td>Saturday</td><td>10:00 am – 04:00 pm</td></tr>
+                            <tr><td>Sunday</td><td class="status-closed">Closed</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- CONTACT SUITE EDITORIAL STYLING (Append to your master style block) -->
+    <style>
+        /* Contact Section Grid Structure */
+        .contact-split-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        /* Luxury Form Design */
+        .contact-form-container {
+            background-color: var(--surface-color);
+            border: 1px solid #e8e7e3;
+            padding: 45px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
+        }
+
+        .luxury-form {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .form-input {
+            width: 100%;
+            background-color: var(--bg-color);
+            border: 1px solid #e8e7e3;
+            padding: 14px 16px;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            color: var(--text-main);
+            border-radius: 2px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit-btn {
+            background-color: var(--text-main);
+            color: #ffffff;
+            border: 1px solid var(--text-main);
+            padding: 16px 32px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 2px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            margin-top: 10px;
+        }
+
+        .form-submit-btn:hover {
+            background-color: transparent;
+            color: var(--text-main);
+        }
+
+        .form-captcha-notice {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+        }
+
+        /* Boutique Details Card Info */
+        .boutique-details-card {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding-top: 10px;
+        }
+
+        .details-block {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .details-heading {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            line-height: 1.3;
+        }
+
+        .details-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .info-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent-gold);
+            font-weight: 600;
+            border-bottom: 1px solid #e8e7e3;
+            padding-bottom: 8px;
+            margin-bottom: 4px;
+        }
+
+        .boutique-address {
+            font-style: normal;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .boutique-phone {
+            color: var(--text-main);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.05rem;
+            transition: color 0.3s;
+            display: inline-block;
+        }
+
+        .boutique-phone:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Structured Hours Matrix */
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table tr {
+            border-bottom: 1px solid rgba(232, 231, 227, 0.5);
+        }
+
+        .hours-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .hours-table td {
+            padding: 10px 0;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            color: var(--text-muted);
+        }
+
+        .hours-table td.status-closed {
+            color: #bfa095; /* Muted soft blush tone for closed days instead of harsh red */
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        /* Mobile Breakpoint Overrides */
+        @media (max-width: 900px) {
+            .contact-split-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            .contact-form-container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
     </main>
 
 </body>
